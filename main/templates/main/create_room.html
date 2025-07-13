@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block heading %}
+    <title>Create A Chat Room</title>
+{% endblock %}
+
+{% block body %}
+    <div class="form-container">
+        <h2>Create A Chat Room</h2>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="Room Name" name="room_name">
+            <input type="text" placeholder="Room Code" name="room_code">
+            <button type="submit">Create Room</button>
+        </form>
+    </div>
+{% endblock %}
